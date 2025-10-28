@@ -73,3 +73,6 @@ SELECT COUNT(*)AS nb_etudiants FROM etudiants;
 
 /*  JOB9  */
 SELECT * FROM etudiants WHERE naissance > DATE_SUB(CURDATE(), INTERVAL 18 YEAR);
+
+/*  JOB10  */
+SELECT SUM(superficie) AS superficie_totale FROM etages;
