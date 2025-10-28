@@ -76,3 +76,6 @@ SELECT * FROM etudiants WHERE naissance > DATE_SUB(CURDATE(), INTERVAL 18 YEAR);
 
 /*  JOB10  */
 SELECT SUM(superficie) AS superficie_totale FROM etages;
+
+/*  JOB11  */
+SELECT SUM(capacite) AS capacite_totale FROM salles;
