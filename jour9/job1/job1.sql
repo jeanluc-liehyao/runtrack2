@@ -60,3 +60,4 @@ SELECT * FROM etudiants;
 SELECT nom, capacite FROM salles;
 
 /* JOB5 */
+SELECT nom, prenom, naissance FROM etudiants WHERE sexe = 'Femme';
