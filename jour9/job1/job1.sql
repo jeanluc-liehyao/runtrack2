@@ -70,3 +70,6 @@ SELECT * FROM etudiants WHERE naissance < DATE_SUB(CURDATE(), INTERVAL 18 YEAR);
 
 /*  JOB8  */
 SELECT COUNT(*)AS nb_etudiants FROM etudiants;
+
+/*  JOB9  */
+SELECT * FROM etudiants WHERE naissance > DATE_SUB(CURDATE(), INTERVAL 18 YEAR);
