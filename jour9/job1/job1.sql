@@ -85,3 +85,7 @@ SELECT * FROM salles ORDER BY capacite DESC;
 
 /*  JOB13  */
 SELECT AVG(capacite) AS capacite_moyenne FROM salles;
+
+/*  JOB14  */
+SELECT nom, prenom, naissance FROM etudiants WHERE naissance BETWEEN '1998-01-01' AND '2018-01-01';
+
