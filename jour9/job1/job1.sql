@@ -61,3 +61,7 @@ SELECT nom, capacite FROM salles;
 
 /* JOB5 */
 SELECT nom, prenom, naissance FROM etudiants WHERE sexe = 'Femme';
+
+/* JOB6 */
+SELECT * FROM etudiants WHERE prenom LIKE 'T%';
+
