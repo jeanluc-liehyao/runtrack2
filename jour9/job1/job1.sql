@@ -38,15 +38,25 @@ INSERT INTO etudiants (prenom, nom, naissance, sexe, email) VALUES
 ( 'Ruben',' Habib', '1993-05-26', 'Homme', 'ruben.habib@laplateforme.io'),
 ( 'Toto',' Dupont', '2019-11-07', 'Homme', 'toto@laplateforme.io' );
 
-INSERT INTO etages (id, nom, numero, superficie) VALUES
-(1, 'RDC', 0, 500),
-(2, 'R+1', 1, 500);
+INSERT INTO etages (nom, numero, superficie) VALUES
+('RDC', 0, 500),
+('R+1', 1, 500);
 
 
-INSERT INTO salles(id, nom, id_etage, capacite) VALUES
-( 1, 'Lounge', 1, 100),
-( 2, 'Studio Son', 1, 5),
-( 3, 'Broadcasting', 2, 50),
-( 4,'Bocal Peda', 2, 4),
-( 5, 'Coworking', 2, 80),
-( 6, 'Studio Video', 2, 5);
+INSERT INTO salles(nom, id_etage, capacite) VALUES
+( 'Lounge', 1, 100),
+( 'Studio Son', 1, 5),
+( 'Broadcasting', 2, 50),
+('Bocal Peda', 2, 4),
+( 'Coworking', 2, 80),
+( 'Studio Video', 2, 5);
+
+/* JOB3 */
+
+SELECT * FROM etudiants;
+
+/* JOB4 */
+
+SELECT nom, capacite FROM salles;
+
+/* JOB5 */
