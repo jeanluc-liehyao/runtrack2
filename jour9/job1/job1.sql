@@ -51,20 +51,22 @@ INSERT INTO salles(nom, id_etage, capacite) VALUES
 ( 'Coworking', 2, 80),
 ( 'Studio Video', 2, 5);
 
-/* JOB3 */
+/*  JOB3  */
 
 SELECT * FROM etudiants;
 
-/* JOB4 */
+/*  JOB4  */
 
 SELECT nom, capacite FROM salles;
 
-/* JOB5 */
+/*  JOB5  */
 SELECT nom, prenom, naissance FROM etudiants WHERE sexe = 'Femme';
 
-/* JOB6 */
+/*  JOB6  */
 SELECT * FROM etudiants WHERE prenom LIKE 'T%';
 
-/* JOB7 */
+/*  JOB7  */
 SELECT * FROM etudiants WHERE naissance < DATE_SUB(CURDATE(), INTERVAL 18 YEAR);
 
+/*  JOB8  */
+SELECT COUNT(*)AS nb_etudiants FROM etudiants;
