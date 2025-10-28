@@ -82,3 +82,6 @@ SELECT SUM(capacite) AS capacite_totale FROM salles;
 
 /*  JOB12  */
 SELECT * FROM salles ORDER BY capacite DESC;
+
+/*  JOB13  */
+SELECT AVG(capacite) AS capacite_moyenne FROM salles;
