@@ -65,3 +65,6 @@ SELECT nom, prenom, naissance FROM etudiants WHERE sexe = 'Femme';
 /* JOB6 */
 SELECT * FROM etudiants WHERE prenom LIKE 'T%';
 
+/* JOB7 */
+SELECT * FROM etudiants WHERE naissance < DATE_SUB(CURDATE(), INTERVAL 18 YEAR);
+
