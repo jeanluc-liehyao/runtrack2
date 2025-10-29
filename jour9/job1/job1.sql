@@ -57,10 +57,12 @@ SELECT * FROM etudiants;
 
 /*  JOB4  */
 
-SELECT nom, capacite FROM salles;
+SELECT nom, capacite 
+FROM salles;
 
 /*  JOB5  */
-SELECT nom, prenom, naissance FROM etudiants WHERE sexe = 'Femme';
+SELECT nom, prenom, naissance 
+FROM etudiants WHERE sexe = 'Femme';
 
 /*  JOB6  */
 SELECT * FROM etudiants WHERE prenom LIKE 'T%';
@@ -69,23 +71,45 @@ SELECT * FROM etudiants WHERE prenom LIKE 'T%';
 SELECT * FROM etudiants WHERE naissance < DATE_SUB(CURDATE(), INTERVAL 18 YEAR);
 
 /*  JOB8  */
-SELECT COUNT(*)AS nb_etudiants FROM etudiants;
+SELECT COUNT(*)AS nb_etudiants 
+FROM etudiants;
 
 /*  JOB9  */
 SELECT * FROM etudiants WHERE naissance > DATE_SUB(CURDATE(), INTERVAL 18 YEAR);
 
 /*  JOB10  */
-SELECT SUM(superficie) AS superficie_totale FROM etages;
+SELECT SUM(superficie) AS superficie_totale 
+FROM etages;
 
 /*  JOB11  */
-SELECT SUM(capacite) AS capacite_totale FROM salles;
+SELECT SUM(capacite) AS capacite_totale 
+FROM salles;
 
 /*  JOB12  */
 SELECT * FROM salles ORDER BY capacite DESC;
 
 /*  JOB13  */
-SELECT AVG(capacite) AS capacite_moyenne FROM salles;
+SELECT AVG(capacite) AS capacite_moyenne 
+FROM salles;
 
 /*  JOB14  */
-SELECT nom, prenom, naissance FROM etudiants WHERE naissance BETWEEN '1998-01-01' AND '2018-01-01';
+SELECT nom, prenom, naissance 
+FROM etudiants 
+WHERE naissance BETWEEN '1998-01-01' AND '2018-01-01';
+
+/*  JOB15  */
+SELECT 
+    etages.nom AS nom_etage, 
+    salles.nom AS nom_salle 
+FROM salles 
+JOIN etages ON salles.id_etage = etages.id
+
+/*  JOB16  */
+SELECT 
+    salles.nom AS 'Biggest Room', 
+    salles.capacite, 
+    etages.nom AS nom_etage
+FROM salles 
+JOIN etages ON salles.id_etage = etages.id
+WHERE salles.capacite = (SELECT MAX(capacite) FROM salles)
 
